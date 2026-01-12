@@ -1,0 +1,50 @@
+baseURL = "https://estateindex.example.com/"
+languageCode = "en-us"
+title = "Estate Index | Global Property Intelligence"
+enableRobotsTXT = true
+enableGitInfo = true
+removePathAccents = true
+
+# Output formats
+[outputs]
+home = ["HTML", "JSON"]
+section = ["HTML"]
+
+# Output media type for search index
+[mediaTypes."application/json"]
+suffixes = ["json"]
+
+[outputFormats.JSON]
+name = "JSON"
+isPlainText = true
+mediaType = "application/json"
+baseName = "index"
+isHtml = false
+
+# Taxonomies
+[taxonomies]
+location = "locations"
+country = "countries"
+listingtype = "types"
+tag = "tags"
+
+# Markup
+[markup.goldmark.renderer]
+unsafe = false
+
+# Menu
+[menu]
+[[menu.main]]
+name = "Browse"
+url = "/listings/"
+weight = 1
+
+[[menu.main]]
+name = "Locations"
+url = "/locations/"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 3

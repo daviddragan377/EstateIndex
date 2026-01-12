@@ -1,0 +1,22 @@
+{
+  "name": "estate-index",
+  "version": "1.0.0",
+  "description": "Production-ready static property listings website",
+  "private": true,
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./static/css/main.css",
+    "sync": "./scripts/sync.sh",
+    "dev": "hugo server",
+    "watch": "./scripts/watch.sh",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  },
+  "devDependencies": {
+    "postcss-cli": "^10.1.0"
+  }
+}

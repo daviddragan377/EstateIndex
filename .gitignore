@@ -1,0 +1,11 @@
+* cache/
+.hugo_build.lock
+/public
+/resources
+node_modules/
+.env
+.env.local
+*.swp
+*.swo
+.DS_Store
+cmd/xmlsync/xmlsync

@@ -1,0 +1,45 @@
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-gradient-to-r from-blue-900 to-blue-800 rounded-lg"></div>
+        <span class="font-serif font-bold text-gray-900">Estate Index</span>
+      </a>
+      
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/listings/" class="text-gray-700 hover:text-gray-900 transition-colors">Browse</a>
+        <a href="/locations/" class="text-gray-700 hover:text-gray-900 transition-colors">Markets</a>
+        <a href="/about/" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
+      </nav>
+      
+      <!-- Actions -->
+      <div class="flex items-center space-x-4">
+        <a href="/compare/" class="flex items-center space-x-1 text-gray-700 hover:text-gray-900 transition-colors">
+          <span>Compare</span>
+          <span id="comparison-badge" class="inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-blue-900 rounded-full hidden">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+// Update comparison badge
+function updateComparisonBadge() {
+  const stored = localStorage.getItem('comparison');
+  const count = stored ? JSON.parse(stored).length : 0;
+  const badge = document.getElementById('comparison-badge');
+  
+  if (count > 0) {
+    badge.textContent = count;
+    badge.classList.remove('hidden');
+  } else {
+    badge.classList.add('hidden');
+  }
+}
+
+updateComparisonBadge();
+window.addEventListener('storage', updateComparisonBadge);
+</script>

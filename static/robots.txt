@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estateindex.example.com/sitemap.xml

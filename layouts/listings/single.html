@@ -1,0 +1,131 @@
+{{ define "main" }}
+<article class="py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <div class="mb-12 pb-8 border-b border-gray-200">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+        {{ .Title }}
+      </h1>
+      
+      <div class="flex flex-wrap gap-3 mb-6">
+        {{ if .Params.country }}
+          <span class="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-semibold rounded">
+            {{ .Params.country }}
+          </span>
+        {{ end }}
+        {{ if .Params.location }}
+          <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-semibold rounded">
+            {{ .Params.location }}
+          </span>
+        {{ end }}
+        {{ if .Params.listingtype }}
+          <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-semibold rounded">
+            {{ .Params.listingtype }}
+          </span>
+        {{ end }}
+      </div>
+      
+      <p class="text-2xl font-serif font-bold text-blue-900">
+        {{ .Params.price | default "Contact for pricing" }}
+      </p>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
+      <!-- Description -->
+      <div class="lg:col-span-2">
+        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Property Overview</h2>
+        <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed mb-8">
+          {{ .Content }}
+        </div>
+        
+        {{ if .Params.features }}
+        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6 mt-12">Key Features</h2>
+        <ul class="space-y-3 text-gray-700">
+          {{ range .Params.features }}
+          <li class="flex items-start">
+            <span class="text-blue-900 font-bold mr-3">✓</span>
+            <span>{{ . }}</span>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <div class="sticky top-6 space-y-6">
+          <!-- Quick Facts -->
+          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h3 class="text-lg font-serif font-bold text-gray-900 mb-4">Details</h3>
+            <dl class="space-y-4 text-sm">
+              {{ if .Params.bedrooms }}
+              <div>
+                <dt class="text-gray-600">Bedrooms</dt>
+                <dd class="font-semibold text-gray-900">{{ .Params.bedrooms }}</dd>
+              </div>
+              {{ end }}
+              {{ if .Params.bathrooms }}
+              <div>
+                <dt class="text-gray-600">Bathrooms</dt>
+                <dd class="font-semibold text-gray-900">{{ .Params.bathrooms }}</dd>
+              </div>
+              {{ end }}
+              {{ if .Params.area }}
+              <div>
+                <dt class="text-gray-600">Area</dt>
+                <dd class="font-semibold text-gray-900">{{ .Params.area }}</dd>
+              </div>
+              {{ end }}
+              {{ if .Params.yearbuilt }}
+              <div>
+                <dt class="text-gray-600">Year Built</dt>
+                <dd class="font-semibold text-gray-900">{{ .Params.yearbuilt }}</dd>
+              </div>
+              {{ end }}
+            </dl>
+          </div>
+          
+          <!-- Actions -->
+          <div class="space-y-3">
+            <button class="w-full px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-800 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow" 
+              onclick="window.location.href='/compare/?add={{ .Params.id }}'">
+              Add to Comparison
+            </button>
+            
+            <a href="https://example.crm.io/inquiry?property={{ .Params.id }}" 
+              class="block text-center px-6 py-3 border border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+              Request Information
+            </a>
+          </div>
+          
+          <!-- Investment Brief (placeholder) -->
+          <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+            <h3 class="text-sm font-serif font-bold text-blue-900 mb-2">Investment Brief</h3>
+            <p class="text-sm text-gray-700 mb-4">
+              Detailed investment analysis available through our specialists.
+            </p>
+            <a href="#" class="text-sm font-semibold text-blue-900 hover:text-blue-800">
+              Request market report →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Related Listings -->
+    {{ if gt (len (where .Site.RegularPages "Section" "listings")) 1 }}
+    <div class="mt-16 pt-12 border-t border-gray-200">
+      <h2 class="text-2xl font-serif font-bold text-gray-900 mb-8">Similar Listings</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ range first 3 (where (where .Site.RegularPages "Section" "listings") "Params.country" .Params.country) }}
+          {{ if ne .Params.id $.Params.id }}
+            {{ partial "listing-card.html" . }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

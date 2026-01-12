@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@layer keyframes {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatUp {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+/* Component utilities */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-gradient-to-r from-blue-900 to-blue-800 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-8 py-3 border border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors;
+  }
+
+  .btn-ghost {
+    @apply inline-block text-blue-900 font-semibold hover:text-blue-800 transition-colors;
+  }
+
+  /* Cards */
+  .card {
+    @apply p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200;
+  }
+
+  /* Typography */
+  .prose {
+    @apply leading-relaxed text-gray-700;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-serif font-bold text-gray-900 mb-4 mt-8;
+  }
+
+  .prose h3 {
+    @apply text-xl font-serif font-bold text-gray-900 mb-3 mt-6;
+  }
+
+  .prose ul {
+    @apply list-disc list-inside space-y-2 mb-4;
+  }
+
+  /* Badges & Tags */
+  .badge {
+    @apply inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-semibold rounded;
+  }
+
+  .badge-gray {
+    @apply inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-semibold rounded;
+  }
+
+  /* Links */
+  a {
+    @apply text-blue-900 hover:text-blue-800 transition-colors;
+  }
+
+  /* Line clamping */
+  .line-clamp-1 {
+    @apply overflow-hidden text-ellipsis whitespace-nowrap;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Utility classes for animations */
+@layer utilities {
+  .animate-fade-in {
+    @apply opacity-0 animate-[fadeIn_0.6s_ease-out_forwards];
+  }
+
+  .animate-slide-in-up {
+    @apply animate-[slideInUp_0.5s_ease-out];
+  }
+
+  .animate-float {
+    @apply animate-[floatUp_3s_ease-in-out_infinite];
+  }
+}
+
+/* Global base styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+/* Typography System */
+@layer base {
+  html {
+    font-family: 'Georgia', 'Garamond', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  button {
+    @apply transition-colors transition-shadow;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-800 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 text-blue-900 font-semibold hover:text-blue-800 transition-colors;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .badge {
+    @apply inline-block px-3 py-1 text-sm font-semibold rounded-lg;
+  }
+
+  .badge-primary {
+    @apply badge bg-blue-100 text-blue-900;
+  }
+
+  .badge-secondary {
+    @apply badge bg-gray-100 text-gray-700;
+  }
+
+  .prose-sm {
+    @apply leading-relaxed text-gray-700;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Animation Utilities */
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatUp {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  .animate-float {
+    animation: floatUp 3s ease-in-out infinite;
+  }
+
+  .transition-all {
+    @apply transition-all duration-300;
+  }
+}

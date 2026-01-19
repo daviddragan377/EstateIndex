@@ -32,12 +32,12 @@ type Listing struct {
 
 // XMLAddress holds property address information
 type XMLAddress struct {
-	Street      string `xml:"street"`
-	Location    string `xml:"location"`
-	Region      string `xml:"region"`
-	Country     string `xml:"country"`
-	Latitude    string `xml:"latitude"`
-	Longitude   string `xml:"longitude"`
+	Street    string `xml:"street"`
+	Location  string `xml:"location"`
+	Region    string `xml:"region"`
+	Country   string `xml:"country"`
+	Latitude  string `xml:"latitude"`
+	Longitude string `xml:"longitude"`
 }
 
 // XMLPrice holds pricing information
@@ -48,18 +48,18 @@ type XMLPrice struct {
 
 // XMLDescriptionContent holds detailed description
 type XMLDescriptionContent struct {
-	PropertyType   string `xml:"propertyType"`
-	Title          string `xml:"title"`
-	Description    string `xml:"description"`
-	Bedrooms       string `xml:"bedrooms"`
-	FullBathrooms  string `xml:"fullBathrooms"`
-	HalfBathrooms  string `xml:"halfBathrooms"`
-	YearBuilt      string `xml:"yearBuilt"`
-	Heating        string `xml:"heating"`
-	Elevator       string `xml:"elevator"`
-	SwimmingPool   string `xml:"swimmingPool"`
-	Furnishings    string `xml:"furnishings"`
-	Features       struct {
+	PropertyType  string `xml:"propertyType"`
+	Title         string `xml:"title"`
+	Description   string `xml:"description"`
+	Bedrooms      string `xml:"bedrooms"`
+	FullBathrooms string `xml:"fullBathrooms"`
+	HalfBathrooms string `xml:"halfBathrooms"`
+	YearBuilt     string `xml:"yearBuilt"`
+	Heating       string `xml:"heating"`
+	Elevator      string `xml:"elevator"`
+	SwimmingPool  string `xml:"swimmingPool"`
+	Furnishings   string `xml:"furnishings"`
+	Features      struct {
 		Feature []string `xml:"Feature"`
 	} `xml:"Features"`
 	FloorSize struct {
@@ -303,7 +303,6 @@ func formatPrice(price string, currency string) string {
 
 	return currencySymbol + price
 }
-
 
 func getExistingListings(contentDir string) (map[string]bool, error) {
 	existing := make(map[string]bool)

@@ -1,0 +1,14 @@
+{{- $pages := where .Site.RegularPages "Section" "listings" -}}
+[
+  {{- range $index, $page := $pages -}}
+  {
+    "id": "{{ .Params.id }}",
+    "title": "{{ .Title | jsonify }}",
+    "location": "{{ .Params.location | jsonify }}",
+    "country": "{{ .Params.country | jsonify }}",
+    "price": "{{ .Params.price | jsonify }}",
+    "url": "{{ .Permalink }}"
+  }
+  {{- if lt $index (sub (len $pages) 1) }},{{ end }}
+  {{- end }}
+]

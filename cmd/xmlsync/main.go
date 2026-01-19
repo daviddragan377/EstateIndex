@@ -27,6 +27,7 @@ type Listing struct {
 	Area        string
 	YearBuilt   string
 	Features    []string
+	Images      []string
 }
 
 // XMLProperty represents a property in the XML feed
@@ -43,12 +44,38 @@ type XMLProperty struct {
 	Area        string `xml:"area"`
 	YearBuilt   string `xml:"yearbuilt"`
 	Features    string `xml:"features"`
+	Images      []string `xml:"images>image"`
+	Photos      []string `xml:"photos>photo"`
+	Pictures    []string `xml:"pictures>picture"`
+	Picture     []string `xml:"picture"`
+	ImageURL    string   `xml:"image_url"`
+	Image       string   `xml:"image"`
 }
 
-// XMLFeed represents the root XML structure
-type XMLFeed struct {
-	XMLName    xml.Name      `xml:"properties"`
+// XMLProperties wraps a collection of properties
+type XMLProperties struct {
 	Properties []XMLProperty `xml:"property"`
+}
+
+// XMLClientDetails holds client metadata
+type XMLClientDetails struct {
+	ClientName string `xml:"clientName"`
+}
+
+// XMLClient wraps client info with their properties
+type XMLClient struct {
+	ClientDetails XMLClientDetails `xml:"clientDetails"`
+	Properties    XMLProperties    `xml:"properties"`
+}
+
+// XMLClients wraps multiple clients
+type XMLClients struct {
+	Clients []XMLClient `xml:"client"`
+}
+
+// XMLDocument is the root feed structure
+type XMLDocument struct {
+	Clients XMLClients `xml:"clients"`
 }
 
 func main() {
@@ -56,6 +83,14 @@ func main() {
 	contentDir := flag.String("content", "./content/listings", "Content directory")
 	dryRun := flag.Bool("dry-run", false, "Dry run mode")
 	flag.Parse()
+
+	// If a local xml_feed.txt exists, prefer its contents as the feed URL
+	if data, err := os.ReadFile("xml_feed.txt"); err == nil {
+		candidate := strings.TrimSpace(string(data))
+		if candidate != "" {
+			*feedURL = candidate
+		}
+	}
 
 	log.Println("Estate Index XML Sync Tool")
 	log.Println("==========================")
@@ -145,28 +180,40 @@ func fetchAndParseFeed(feedURL string) ([]Listing, error) {
 		return nil, fmt.Errorf("HTTP %d: %s", resp.StatusCode, resp.Status)
 	}
 
-	var feed XMLFeed
-	if err := xml.NewDecoder(resp.Body).Decode(&feed); err != nil {
+	var doc XMLDocument
+	if err := xml.NewDecoder(resp.Body).Decode(&doc); err != nil {
 		return nil, err
 	}
 
 	var listings []Listing
-	for _, prop := range feed.Properties {
-		listing := Listing{
-			ID:          prop.ID,
-			Title:       prop.Title,
-			Description: prop.Description,
-			Price:       formatPrice(prop.Price),
-			Location:    prop.Location,
-			Country:     prop.Country,
-			ListingType: prop.Type,
-			Bedrooms:    prop.Bedrooms,
-			Bathrooms:   prop.Bathrooms,
-			Area:        prop.Area,
-			YearBuilt:   prop.YearBuilt,
-			Features:    parseFeatures(prop.Features),
+
+	// Iterate through clients and their properties
+	for _, client := range doc.Clients.Clients {
+		for _, prop := range client.Properties.Properties {
+			listing := Listing{
+				ID:          prop.ID,
+				Title:       prop.Title,
+				Description: prop.Description,
+				Price:       formatPrice(prop.Price),
+				Location:    prop.Location,
+				Country:     prop.Country,
+				ListingType: prop.Type,
+				Bedrooms:    prop.Bedrooms,
+				Bathrooms:   prop.Bathrooms,
+				Area:        prop.Area,
+				YearBuilt:   prop.YearBuilt,
+				Features:    parseFeatures(prop.Features),
+				Images:      aggregateImages(prop),
+			}
+
+			// Fallback ID if missing; sanitize spaces
+			if strings.TrimSpace(listing.ID) == "" {
+				listing.ID = strings.TrimSpace(listing.Title)
+			}
+			listing.ID = strings.ReplaceAll(listing.ID, " ", "-")
+
+			listings = append(listings, listing)
 		}
-		listings = append(listings, listing)
 	}
 
 	return listings, nil
@@ -187,9 +234,9 @@ func parseFeatures(featuresStr string) []string {
 	if featuresStr == "" {
 		return []string{}
 	}
-	// Split by comma or semicolon
+	// Split by comma, semicolon, or newline
 	features := strings.FieldsFunc(featuresStr, func(r rune) bool {
-		return r == ',' || r == ';'
+		return r == ',' || r == ';' || r == '\n'
 	})
 
 	var cleaned []string
@@ -200,6 +247,52 @@ func parseFeatures(featuresStr string) []string {
 		}
 	}
 	return cleaned
+}
+
+func aggregateImages(prop XMLProperty) []string {
+	var images []string
+
+	addAll := func(list []string) {
+		for _, img := range list {
+			for _, token := range strings.Fields(img) {
+				trimmed := strings.TrimSpace(token)
+				if trimmed != "" {
+					images = append(images, trimmed)
+				}
+			}
+		}
+	}
+
+	addIf := func(s string) {
+		s = strings.TrimSpace(s)
+		if s != "" {
+			for _, token := range strings.Fields(s) {
+				trimmed := strings.TrimSpace(token)
+				if trimmed != "" {
+					images = append(images, trimmed)
+				}
+			}
+		}
+	}
+
+	addAll(prop.Images)
+	addAll(prop.Photos)
+	addAll(prop.Pictures)
+	addAll(prop.Picture)
+	addIf(prop.ImageURL)
+	addIf(prop.Image)
+
+	// Deduplicate while preserving order
+	seen := make(map[string]bool)
+	var unique []string
+	for _, img := range images {
+		if !seen[img] {
+			unique = append(unique, img)
+			seen[img] = true
+		}
+	}
+
+	return unique
 }
 
 func getExistingListings(contentDir string) (map[string]bool, error) {
@@ -277,6 +370,19 @@ draft: false
 	_, err = io.WriteString(file, frontmatter)
 	if err != nil {
 		return err
+	}
+
+	if len(listing.Images) > 0 {
+		_, err = io.WriteString(file, "images:\n")
+		if err != nil {
+			return err
+		}
+		for _, img := range listing.Images {
+			_, err = io.WriteString(file, fmt.Sprintf("  - \"%s\"\n", escapeYAML(img)))
+			if err != nil {
+				return err
+			}
+		}
 	}
 
 	// Features array in frontmatter

@@ -10,9 +10,15 @@ removePathAccents = true
 home = ["HTML", "JSON"]
 section = ["HTML"]
 
-# Output media type for search index
+# Output media types
 [mediaTypes."application/json"]
 suffixes = ["json"]
+
+[mediaTypes."text/css"]
+suffixes = ["css"]
+
+[mediaTypes."application/javascript"]
+suffixes = ["js"]
 
 [outputFormats.JSON]
 name = "JSON"

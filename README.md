@@ -1,18 +1,18 @@
 # Estate Index
 
-A production-ready static property listings website powered by Hugo and Tailwind CSS. This platform ingests XML property feeds, generates fully static pages with excellent SEO, and provides client-side search, filtering, and property comparison.
+A production-ready static property listings website powered by Hugo and pure CSS. This platform ingests XML property feeds, generates fully static pages with excellent SEO, and provides client-side search, filtering, and property comparison.
 
 ## Overview
 
 Estate Index is a **read-only, comparison and lead-funnel site** designed for serious investors, advisors, and wealth managers. It features:
 
 - **Static site generation** via Hugo for blazing-fast page loads
-- **XML feed integration** with automatic listing sync and updates
+- **XML feed integration** with automatic daily sync via cron job
 - **Global search** powered by a JSON index generated at build time
 - **Property filtering** by location, country, and type
 - **Side-by-side comparison** of up to 2 listings
 - **Outbound lead routing** to external CRM and investment services
-- **Authoritative design** with a restrained, investment-grade aesthetic
+- **Authoritative design** with navy (#25304a), beige (#d0ad72), and minimal aesthetic
 
 ### Key Characteristics
 
@@ -21,12 +21,13 @@ Estate Index is a **read-only, comparison and lead-funnel site** designed for se
 - ✅ **No payments** – Lead funnel only, external CRM integration
 - ✅ **Minimal JS** – Client-side only, vanilla JavaScript
 - ✅ **SEO-optimized** – Proper meta tags, semantic HTML, fast builds
-- ✅ **Mobile-responsive** – Tailwind CSS responsive design
+- ✅ **Mobile-responsive** – Pure CSS responsive design
+- ✅ **Automatic updates** – Daily cron job syncs XML feed without UI notifications
 
 ## Technology Stack
 
-- **Static Site Generator:** Hugo 0.100+
-- **Styling:** Tailwind CSS 3.x
+- **Static Site Generator:** Hugo 0.152+
+- **Styling:** Pure CSS (no framework dependencies)
 - **JavaScript:** Vanilla ES6 (client-side only)
 - **Feed Processing:** Go CLI (`cmd/xmlsync`)
 - **Typography:** Georgia serif font (trust, authority)
@@ -36,16 +37,17 @@ Estate Index is a **read-only, comparison and lead-funnel site** designed for se
 
 ### Prerequisites
 
-- **Hugo** 0.100+ ([install](https://gohugo.io/installation/))
+- **Hugo** 0.152+ ([install](https://gohugo.io/installation/))
 - **Go** 1.21+ ([install](https://golang.org/doc/install))
-- **Node.js** 16+ with npm ([install](https://nodejs.org/))
+- **Node.js** 16+ with npm ([install](https://nodejs.org/)) – optional, only for asset copying
 
-### 1. Install Dependencies
+### 1. Setup Development Environment
 
 ```bash
-npm install
-cd cmd/xmlsync && go build -o xmlsync . && cd ../..
+./scripts/setup.sh
 ```
+
+This script verifies all dependencies and builds the xmlsync CLI.
 
 ### 2. Build the Site
 
@@ -66,6 +68,45 @@ hugo server
 ```
 
 Visit `http://localhost:1313`
+
+## Daily Automatic Updates (Cron Job)
+
+The `cron_sync_listings.sh` script updates listings daily without UI notifications. All logging goes to `logs/listings_updates.log`.
+
+### Setup
+
+1. Make the cron script executable:
+```bash
+chmod +x ./scripts/cron_sync_listings.sh
+```
+
+2. Add to crontab (runs daily at 2 AM):
+```bash
+crontab -e
+```
+
+Add this line:
+```
+0 2 * * * /path/to/EstateIndex/scripts/cron_sync_listings.sh
+```
+
+### Logging
+
+- **Success**: Logged to `logs/listings_updates.log` with timestamp
+- **Errors**: Logged to `logs/listings_updates.log` with full error details
+- **Fallback**: If sync fails, previous listings remain in place (no data loss)
+- **Never**: Errors/logs never displayed in UI
+
+Example log entry:
+```
+[2024-01-12 02:00:15] ==========================================
+[2024-01-12 02:00:15] Starting daily listings sync
+[2024-01-12 02:00:15] Building xmlsync CLI...
+[2024-01-12 02:00:18] Fetching and syncing XML feed...
+[2024-01-12 02:00:45] SUCCESS: XML feed synced successfully
+[2024-01-12 02:00:45] Rebuilding Hugo site...
+[2024-01-12 02:01:12] SUCCESS: Site rebuilt successfully
+```
 
 ## Core Features
 
@@ -112,9 +153,11 @@ Inquiry forms post directly to external CRM/investment services:
 
 ### Color Palette
 
-- **Primary Accent:** Deep navy metallic gradient (`#0f172a` to `#1e293b`)
-- **Base Pages:** White and warm beige (`#fef9f3`)
-- **Footer:** Pure black (`#000000`)
+- **Primary Navy:** `#25304a` (header background)
+- **Beige Accent:** `#d0ad72` (buttons, highlights)
+- **Off-white:** `#f5f3f0` (footer text, creamy accents)
+- **Base Pages:** White and light cream
+- **Footer:** Deep black (`#1a1a1a`)
 - **Text:** Near-black and muted charcoal
 
 ### Typography
@@ -137,7 +180,7 @@ Inquiry forms post directly to external CRM/investment services:
 ./scripts/deploy.sh netlify
 ```
 
-Or via Git integration with build command: `npm install && ./scripts/build.sh`
+Or via Git integration with build command: `./scripts/build.sh`
 
 ### Vercel
 

@@ -49,8 +49,11 @@ else
 fi
 
 echo ""
-echo "Installing Node dependencies..."
-npm install
+echo "Copying static assets..."
+mkdir -p static/css static/js
+cp assets/css/main.css static/css/main.css
+cp assets/js/main.js static/js/main.js
+echo "✓ Assets copied to static/"
 
 echo ""
 echo "Building xmlsync CLI..."

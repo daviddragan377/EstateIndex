@@ -1,12 +1,18 @@
-<div class="group opacity-0 animate-fade-in" data-listing data-title="{{ .Title }}" data-country="{{ .Params.country }}">
+<div class="group opacity-0 animate-fade-in card" data-listing data-title="{{ .Title }}" data-country="{{ .Params.country }}">
   <a href="{{ .Permalink }}" class="block h-full">
-    <!-- Image Placeholder -->
-    <div class="relative w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg mb-4 overflow-hidden group-hover:shadow-md transition-shadow">
-      <div class="absolute inset-0 flex items-center justify-center">
-        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-      </div>
+    <!-- Image -->
+    {{ $hasImage := and .Params.images (gt (len .Params.images) 0) }}
+    <div class="relative w-full h-48 rounded-lg mb-4 overflow-hidden group-hover:shadow-md transition-shadow {{ if not $hasImage }}bg-gradient-to-br from-gray-200 to-gray-300{{ end }}">
+      {{ if $hasImage }}
+        {{ $img := index .Params.images 0 }}
+        <img src="{{ $img }}" alt="{{ .Title }}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+      {{ else }}
+        <div class="absolute inset-0 flex items-center justify-center">
+          <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+      {{ end }}
     </div>
     
     <!-- Content -->
@@ -18,19 +24,19 @@
       <!-- Meta -->
       <div class="flex flex-wrap gap-2 mb-4">
         {{ if .Params.country }}
-          <span class="inline-block text-xs px-2 py-1 bg-blue-100 text-blue-900 rounded">
+          <span class="badge badge-primary">
             {{ .Params.country }}
           </span>
         {{ end }}
         {{ if .Params.location }}
-          <span class="inline-block text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded">
+          <span class="badge badge-secondary">
             {{ .Params.location }}
           </span>
         {{ end }}
       </div>
       
       <!-- Price -->
-      <p class="text-xl font-serif font-bold text-blue-900 mb-2">
+      <p class="text-xl font-serif font-bold text-navy mb-2">
         {{ .Params.price | default "Contact" }}
       </p>
       
@@ -44,7 +50,7 @@
       {{ end }}
       
       <!-- CTA -->
-      <div class="flex items-center space-x-2 text-blue-900 font-semibold group-hover:space-x-3 transition-all">
+      <div class="flex items-center space-x-2 text-navy font-semibold group-hover:space-x-3 transition-all">
         <span>View Details</span>
         <span>→</span>
       </div>
@@ -52,9 +58,9 @@
   </a>
   
   <!-- Add to Comparison Button -->
-  <button class="mt-4 w-full px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-sm"
+  <button class="mt-4 w-full btn-secondary"
     onclick="addToComparison('{{ .Params.id }}', event)">
-    Add to Comparison
+    + Add to Comparison
   </button>
 </div>
 
@@ -73,6 +79,11 @@
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+.text-navy { color: #25304a; }
+.badge { display: inline-block; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 600; border-radius: 0.375rem; }
+.badge-primary { background-color: rgba(37, 48, 74, 0.1); color: #25304a; }
+.badge-secondary { background-color: #f3f4f6; color: #374151; }
 </style>
 
 <script>
@@ -91,10 +102,14 @@ function addToComparison(propertyId, event) {
     const btn = event.target;
     const original = btn.textContent;
     btn.textContent = '✓ Added';
-    btn.classList.add('bg-green-50', 'border-green-300', 'text-green-700');
+    btn.style.backgroundColor = '#10b981';
+    btn.style.borderColor = '#10b981';
+    btn.style.color = '#ffffff';
     setTimeout(() => {
       btn.textContent = original;
-      btn.classList.remove('bg-green-50', 'border-green-300', 'text-green-700');
+      btn.style.backgroundColor = '';
+      btn.style.borderColor = '';
+      btn.style.color = '';
     }, 2000);
   }
 }

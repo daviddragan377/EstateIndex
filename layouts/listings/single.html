@@ -1,131 +1,178 @@
 {{ define "main" }}
 <article class="py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-6xl mx-auto">
     <!-- Header -->
-    <div class="mb-12 pb-8 border-b border-gray-200">
+    <div class="mb-10 pb-6 border-b border-gray-200">
       <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
         {{ .Title }}
       </h1>
       
-      <div class="flex flex-wrap gap-3 mb-6">
+      <div class="flex flex-wrap gap-3 mb-4">
         {{ if .Params.country }}
-          <span class="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-sm font-semibold rounded">
-            {{ .Params.country }}
-          </span>
+          <span class="badge badge-primary">{{ .Params.country }}</span>
         {{ end }}
         {{ if .Params.location }}
-          <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-semibold rounded">
-            {{ .Params.location }}
-          </span>
+          <span class="badge badge-secondary">{{ .Params.location }}</span>
         {{ end }}
         {{ if .Params.listingtype }}
-          <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-semibold rounded">
-            {{ .Params.listingtype }}
-          </span>
+          <span class="badge badge-secondary">{{ .Params.listingtype }}</span>
         {{ end }}
       </div>
       
-      <p class="text-2xl font-serif font-bold text-blue-900">
+      <p class="text-2xl font-serif font-bold text-navy">
         {{ .Params.price | default "Contact for pricing" }}
       </p>
     </div>
     
     <!-- Main Content -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
-      <!-- Description -->
-      <div class="lg:col-span-2">
-        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Property Overview</h2>
-        <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed mb-8">
-          {{ .Content }}
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left: Media + Details -->
+      <div class="lg:col-span-2 space-y-10">
+        <!-- Carousel -->
+        {{ $hasImages := and .Params.images (gt (len .Params.images) 0) }}
+        <div class="carousel" data-images='{{ with .Params.images }}{{ jsonify . }}{{ else }}[]{{ end }}'>
+          <div class="carousel-viewport">
+            {{ if $hasImages }}
+              {{ $first := index .Params.images 0 }}
+              <a id="carousel-main-link" href="{{ $first }}" target="_blank" rel="noopener">
+                <img id="carousel-main" src="{{ $first }}" alt="{{ .Title }}" class="carousel-image" loading="lazy" />
+              </a>
+            {{ else }}
+              <div class="carousel-placeholder">
+                <span>No media available</span>
+              </div>
+            {{ end }}
+          </div>
+          {{ if $hasImages }}
+          <div class="carousel-controls">
+            <button class="carousel-btn" data-dir="prev">‹</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <button class="carousel-btn" data-dir="next">›</button>
+          </div>
+          <div class="carousel-thumbs" id="carousel-thumbs">
+            {{ range $i, $img := .Params.images }}
+              <button class="carousel-thumb" data-index="{{ $i }}">
+                <img src="{{ $img }}" alt="{{ $.Title }} thumbnail {{ add $i 1 }}" loading="lazy" />
+              </button>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+
+        <!-- Description -->
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4">Property Overview</h2>
+          <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+            {{ .Content }}
+          </div>
         </div>
         
         {{ if .Params.features }}
-        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6 mt-12">Key Features</h2>
-        <ul class="space-y-3 text-gray-700">
-          {{ range .Params.features }}
-          <li class="flex items-start">
-            <span class="text-blue-900 font-bold mr-3">✓</span>
-            <span>{{ . }}</span>
-          </li>
-          {{ end }}
-        </ul>
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4">Key Features</h2>
+          <ul class="space-y-3 text-gray-700">
+            {{ range .Params.features }}
+            <li class="flex items-start">
+              <span class="text-navy font-bold mr-3">✓</span>
+              <span>{{ . }}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
         {{ end }}
       </div>
       
-      <!-- Sidebar -->
-      <div class="lg:col-span-1">
-        <div class="sticky top-6 space-y-6">
-          <!-- Quick Facts -->
-          <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <h3 class="text-lg font-serif font-bold text-gray-900 mb-4">Details</h3>
-            <dl class="space-y-4 text-sm">
-              {{ if .Params.bedrooms }}
-              <div>
-                <dt class="text-gray-600">Bedrooms</dt>
-                <dd class="font-semibold text-gray-900">{{ .Params.bedrooms }}</dd>
-              </div>
-              {{ end }}
-              {{ if .Params.bathrooms }}
-              <div>
-                <dt class="text-gray-600">Bathrooms</dt>
-                <dd class="font-semibold text-gray-900">{{ .Params.bathrooms }}</dd>
-              </div>
-              {{ end }}
-              {{ if .Params.area }}
-              <div>
-                <dt class="text-gray-600">Area</dt>
-                <dd class="font-semibold text-gray-900">{{ .Params.area }}</dd>
-              </div>
-              {{ end }}
-              {{ if .Params.yearbuilt }}
-              <div>
-                <dt class="text-gray-600">Year Built</dt>
-                <dd class="font-semibold text-gray-900">{{ .Params.yearbuilt }}</dd>
-              </div>
-              {{ end }}
-            </dl>
+      <!-- Sidebar CTA -->
+      <div>
+        <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-sm sticky top-24 space-y-4">
+          <div>
+            <p class="text-sm text-gray-600">Price</p>
+            <p class="text-2xl font-serif font-bold text-navy">{{ .Params.price | default "Contact for pricing" }}</p>
           </div>
-          
-          <!-- Actions -->
+
+          <ul class="space-y-2 text-gray-700 text-sm">
+            {{ if .Params.location }}<li><strong>Location:</strong> {{ .Params.location }}</li>{{ end }}
+            {{ if .Params.country }}<li><strong>Country:</strong> {{ .Params.country }}</li>{{ end }}
+            {{ if .Params.listingtype }}<li><strong>Type:</strong> {{ .Params.listingtype }}</li>{{ end }}
+            {{ if .Params.area }}<li><strong>Area:</strong> {{ .Params.area }}</li>{{ end }}
+            {{ if .Params.bedrooms }}<li><strong>Bedrooms:</strong> {{ .Params.bedrooms }}</li>{{ end }}
+            {{ if .Params.bathrooms }}<li><strong>Bathrooms:</strong> {{ .Params.bathrooms }}</li>{{ end }}
+            {{ if .Params.yearbuilt }}<li><strong>Year Built:</strong> {{ .Params.yearbuilt }}</li>{{ end }}
+          </ul>
+
           <div class="space-y-3">
-            <button class="w-full px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-800 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow" 
-              onclick="window.location.href='/compare/?add={{ .Params.id }}'">
-              Add to Comparison
-            </button>
-            
-            <a href="https://example.crm.io/inquiry?property={{ .Params.id }}" 
-              class="block text-center px-6 py-3 border border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
-              Request Information
+            <a href="mailto:hello@estateindex.example.com?subject=Inquiry%20about%20{{ .Params.id | urlize }}" class="btn-primary block text-center">
+              Request Details
             </a>
-          </div>
-          
-          <!-- Investment Brief (placeholder) -->
-          <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
-            <h3 class="text-sm font-serif font-bold text-blue-900 mb-2">Investment Brief</h3>
-            <p class="text-sm text-gray-700 mb-4">
-              Detailed investment analysis available through our specialists.
-            </p>
-            <a href="#" class="text-sm font-semibold text-blue-900 hover:text-blue-800">
-              Request market report →
+            {{ if and .Params.images (gt (len .Params.images) 0) }}
+            <a href="{{ index .Params.images 0 }}" target="_blank" rel="noopener" class="btn-secondary block text-center">
+              View Full Media
             </a>
+            {{ end }}
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- Related Listings -->
-    {{ if gt (len (where .Site.RegularPages "Section" "listings")) 1 }}
-    <div class="mt-16 pt-12 border-t border-gray-200">
-      <h2 class="text-2xl font-serif font-bold text-gray-900 mb-8">Similar Listings</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {{ range first 3 (where (where .Site.RegularPages "Section" "listings") "Params.country" .Params.country) }}
-          {{ if ne .Params.id $.Params.id }}
-            {{ partial "listing-card.html" . }}
-          {{ end }}
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
   </div>
 </article>
+
+<script>
+(function() {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+  const images = JSON.parse(carousel.dataset.images || '[]');
+  if (!images.length) return;
+
+  let index = 0;
+  const main = document.getElementById('carousel-main');
+  const mainLink = document.getElementById('carousel-main-link');
+  const dots = document.getElementById('carousel-dots');
+  const thumbs = document.getElementById('carousel-thumbs');
+
+  function renderIndicators() {
+    if (!dots) return;
+    dots.innerHTML = '';
+    images.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === index ? ' active' : '');
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => goTo(i));
+      dots.appendChild(dot);
+    });
+  }
+
+  function syncThumbs() {
+    if (!thumbs) return;
+    thumbs.querySelectorAll('.carousel-thumb').forEach((btn, i) => {
+      btn.classList.toggle('active', i === index);
+    });
+  }
+
+  function goTo(i) {
+    if (!images[i]) return;
+    index = i;
+    main.src = images[i];
+    mainLink.href = images[i];
+    renderIndicators();
+    syncThumbs();
+  }
+
+  carousel.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dir = btn.dataset.dir === 'next' ? 1 : -1;
+      const next = (index + dir + images.length) % images.length;
+      goTo(next);
+    });
+  });
+
+  if (thumbs) {
+    thumbs.querySelectorAll('.carousel-thumb').forEach(btn => {
+      btn.addEventListener('click', () => goTo(parseInt(btn.dataset.index, 10)));
+    });
+  }
+
+  renderIndicators();
+  syncThumbs();
+})();
+</script>
 {{ end }}

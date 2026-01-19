@@ -32,18 +32,18 @@ type Listing struct {
 
 // XMLProperty represents a property in the XML feed
 type XMLProperty struct {
-	ID          string `xml:"id,attr"`
-	Title       string `xml:"title"`
-	Description string `xml:"description"`
-	Price       string `xml:"price"`
-	Location    string `xml:"location"`
-	Country     string `xml:"country"`
-	Type        string `xml:"type"`
-	Bedrooms    string `xml:"bedrooms"`
-	Bathrooms   string `xml:"bathrooms"`
-	Area        string `xml:"area"`
-	YearBuilt   string `xml:"yearbuilt"`
-	Features    string `xml:"features"`
+	ID          string   `xml:"id,attr"`
+	Title       string   `xml:"title"`
+	Description string   `xml:"description"`
+	Price       string   `xml:"price"`
+	Location    string   `xml:"location"`
+	Country     string   `xml:"country"`
+	Type        string   `xml:"type"`
+	Bedrooms    string   `xml:"bedrooms"`
+	Bathrooms   string   `xml:"bathrooms"`
+	Area        string   `xml:"area"`
+	YearBuilt   string   `xml:"yearbuilt"`
+	Features    string   `xml:"features"`
 	Images      []string `xml:"images>image"`
 	Photos      []string `xml:"photos>photo"`
 	Pictures    []string `xml:"pictures>picture"`

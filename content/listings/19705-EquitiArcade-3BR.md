@@ -1,0 +1,31 @@
+---
+title: "Exclusive 3-Bedroom in Equiti Arcade at Al Furjan"
+description: null
+id: "19705-EquitiArcade-3BR"
+price: "$408441"
+location: null
+country: "United Arab Emirates"
+listingtype: "Apartment"
+bedrooms: "3"
+bathrooms: "4"
+area: "203 sq meters"
+yearbuilt: "2024"
+date: 1768847372
+draft: false
+images:
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1-104.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_2-96.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_3-89.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_6-84.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_7-83.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_8-80.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_9-68.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_11-50.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_13-40.jpg"
+countries:
+  - "United Arab Emirates"
+types:
+  - "Apartment"
+---
+
+Premium property listing.

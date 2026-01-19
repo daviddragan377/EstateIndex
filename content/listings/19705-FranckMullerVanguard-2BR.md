@@ -1,0 +1,32 @@
+---
+title: "Luxury Redefined: Exquisite 2 Bedroom Residences in Dubai Marina"
+description: null
+id: "19705-FranckMullerVanguard-2BR"
+price: "$642614"
+location: null
+country: "United Arab Emirates"
+listingtype: "Apartment"
+bedrooms: "2"
+bathrooms: "2"
+area: "97 sq meters"
+yearbuilt: "2027"
+date: 1768847372
+draft: false
+images:
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Bedroom_3.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Bedroom_4.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Dinning-Room_1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Balcony.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Bathroom_2.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Zen-Room_2.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Zen-Room_1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Pool.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Gym-2-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Living-Room_1.jpg"
+countries:
+  - "United Arab Emirates"
+types:
+  - "Apartment"
+---
+
+Premium property listing.

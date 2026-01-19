@@ -1,0 +1,34 @@
+---
+title: "3 Bedroom Apartment: SUNNY GOLF, NEW BUiLD APARTMENTS FOR SALE AT ESTEPONA GOLF, ESTEPONA, COSTA DEL SOL"
+description: null
+id: "19705-SunnygolfApt3BR"
+price: "$495833"
+location: "Buenas Noches"
+country: "Spain"
+listingtype: "Apartment"
+bedrooms: "3"
+bathrooms: "2"
+area: "103.15 sq meters"
+yearbuilt: "2026"
+date: 1768847370
+draft: false
+images:
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A2-Sunny-Golf-apartments-Estepona-entrance_2.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A4-Sunny-Golf-apartments-Estepona-pool.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A7-Sunny-Golf-apartments-Estepona-solarium_2.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A8-Sunny-Golf-apartments-Estepona-terrace_2.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B1.1-Sunny-Golf-apartments-Estepona-salon_Abril-24.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B1-Sunny-Golf-apartments-Estepona-salon.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B2-Sunny-Golf-apartments-Estepona-living-room_Abril-24.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B3-Sunny-Golf-apartments-Estepona-kitchen.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B4.1-Sunny-Golf-apartments-Estepona-bedroom_Abril-24.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B5.2-Sunny-Golf-apartments-Estepona-bedroom_Abril-24.jpg"
+countries:
+  - "Spain"
+locations:
+  - "Buenas Noches"
+types:
+  - "Apartment"
+---
+
+Premium property listing.

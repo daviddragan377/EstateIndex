@@ -30,31 +30,68 @@ type Listing struct {
 	Images      []string
 }
 
-// XMLProperty represents a property in the XML feed
+// XMLAddress holds property address information
+type XMLAddress struct {
+	Street      string `xml:"street"`
+	Location    string `xml:"location"`
+	Region      string `xml:"region"`
+	Country     string `xml:"country"`
+	Latitude    string `xml:"latitude"`
+	Longitude   string `xml:"longitude"`
+}
+
+// XMLPrice holds pricing information
+type XMLPrice struct {
+	Price    string `xml:"price"`
+	Currency string `xml:"currency"`
+}
+
+// XMLDescriptionContent holds detailed description
+type XMLDescriptionContent struct {
+	PropertyType   string `xml:"propertyType"`
+	Title          string `xml:"title"`
+	Description    string `xml:"description"`
+	Bedrooms       string `xml:"bedrooms"`
+	FullBathrooms  string `xml:"fullBathrooms"`
+	HalfBathrooms  string `xml:"halfBathrooms"`
+	YearBuilt      string `xml:"yearBuilt"`
+	Heating        string `xml:"heating"`
+	Elevator       string `xml:"elevator"`
+	SwimmingPool   string `xml:"swimmingPool"`
+	Furnishings    string `xml:"furnishings"`
+	Features       struct {
+		Feature []string `xml:"Feature"`
+	} `xml:"Features"`
+	FloorSize struct {
+		Size  string `xml:"floorSize"`
+		Units string `xml:"floorSizeUnits"`
+	} `xml:"FloorSize"`
+}
+
+// XMLImage holds individual image data
+type XMLImage struct {
+	URL string `xml:"image"`
+}
+
+// XMLImages holds all images
+type XMLImages struct {
+	Images []XMLImage `xml:"image"`
+}
+
+// XMLProperty represents a single property in the XML feed
 type XMLProperty struct {
-	ID          string   `xml:"id,attr"`
-	Title       string   `xml:"title"`
-	Description string   `xml:"description"`
-	Price       string   `xml:"price"`
-	Location    string   `xml:"location"`
-	Country     string   `xml:"country"`
-	Type        string   `xml:"type"`
-	Bedrooms    string   `xml:"bedrooms"`
-	Bathrooms   string   `xml:"bathrooms"`
-	Area        string   `xml:"area"`
-	YearBuilt   string   `xml:"yearbuilt"`
-	Features    string   `xml:"features"`
-	Images      []string `xml:"images>image"`
-	Photos      []string `xml:"photos>photo"`
-	Pictures    []string `xml:"pictures>picture"`
-	Picture     []string `xml:"picture"`
-	ImageURL    string   `xml:"image_url"`
-	Image       string   `xml:"image"`
+	PropertyID  string                `xml:"propertyid"`
+	LastUpdate  string                `xml:"lastUpdateDate"`
+	Category    string                `xml:"category"`
+	Address     XMLAddress            `xml:"Address"`
+	Price       XMLPrice              `xml:"Price"`
+	Description XMLDescriptionContent `xml:"Description"`
+	Images      XMLImages             `xml:"images"`
 }
 
 // XMLProperties wraps a collection of properties
 type XMLProperties struct {
-	Properties []XMLProperty `xml:"property"`
+	Properties []XMLProperty `xml:"Property"`
 }
 
 // XMLClientDetails holds client metadata
@@ -64,18 +101,18 @@ type XMLClientDetails struct {
 
 // XMLClient wraps client info with their properties
 type XMLClient struct {
-	ClientDetails XMLClientDetails `xml:"clientDetails"`
+	ClientDetails XMLClientDetails `xml:"ClientDetails"`
 	Properties    XMLProperties    `xml:"properties"`
 }
 
 // XMLClients wraps multiple clients
 type XMLClients struct {
-	Clients []XMLClient `xml:"client"`
+	Clients []XMLClient `xml:"Client"`
 }
 
 // XMLDocument is the root feed structure
 type XMLDocument struct {
-	Clients XMLClients `xml:"clients"`
+	Clients XMLClients `xml:"Clients"`
 }
 
 func main() {
@@ -190,27 +227,55 @@ func fetchAndParseFeed(feedURL string) ([]Listing, error) {
 	// Iterate through clients and their properties
 	for _, client := range doc.Clients.Clients {
 		for _, prop := range client.Properties.Properties {
-			listing := Listing{
-				ID:          prop.ID,
-				Title:       prop.Title,
-				Description: prop.Description,
-				Price:       formatPrice(prop.Price),
-				Location:    prop.Location,
-				Country:     prop.Country,
-				ListingType: prop.Type,
-				Bedrooms:    prop.Bedrooms,
-				Bathrooms:   prop.Bathrooms,
-				Area:        prop.Area,
-				YearBuilt:   prop.YearBuilt,
-				Features:    parseFeatures(prop.Features),
-				Images:      aggregateImages(prop),
+			// Extract area from floor size if available
+			area := ""
+			if prop.Description.FloorSize.Size != "" {
+				area = prop.Description.FloorSize.Size + " " + prop.Description.FloorSize.Units
 			}
 
-			// Fallback ID if missing; sanitize spaces
-			if strings.TrimSpace(listing.ID) == "" {
-				listing.ID = strings.TrimSpace(listing.Title)
+			// Extract features
+			var features []string
+			for _, f := range prop.Description.Features.Feature {
+				trimmed := strings.TrimSpace(f)
+				if trimmed != "" {
+					features = append(features, trimmed)
+				}
 			}
-			listing.ID = strings.ReplaceAll(listing.ID, " ", "-")
+
+			// Extract images
+			var images []string
+			for _, img := range prop.Images.Images {
+				if strings.TrimSpace(img.URL) != "" {
+					images = append(images, strings.TrimSpace(img.URL))
+				}
+			}
+
+			// Parse description text (remove CDATA markers if present)
+			description := strings.TrimSpace(prop.Description.Description)
+			description = strings.ReplaceAll(description, "<![CDATA[", "")
+			description = strings.ReplaceAll(description, "]]>", "")
+			description = strings.TrimSpace(description)
+
+			listing := Listing{
+				ID:          strings.TrimSpace(prop.PropertyID),
+				Title:       strings.TrimSpace(prop.Description.Title),
+				Description: description,
+				Price:       formatPrice(prop.Price.Price, prop.Price.Currency),
+				Location:    strings.TrimSpace(prop.Address.Location),
+				Country:     strings.TrimSpace(prop.Address.Country),
+				ListingType: strings.TrimSpace(prop.Description.PropertyType),
+				Bedrooms:    strings.TrimSpace(prop.Description.Bedrooms),
+				Bathrooms:   strings.TrimSpace(prop.Description.FullBathrooms),
+				Area:        area,
+				YearBuilt:   strings.TrimSpace(prop.Description.YearBuilt),
+				Features:    features,
+				Images:      images,
+			}
+
+			// Generate slug ID if missing
+			if listing.ID == "" {
+				listing.ID = strings.ToLower(strings.ReplaceAll(listing.Title, " ", "-"))
+			}
 
 			listings = append(listings, listing)
 		}
@@ -219,81 +284,26 @@ func fetchAndParseFeed(feedURL string) ([]Listing, error) {
 	return listings, nil
 }
 
-func formatPrice(price string) string {
+func formatPrice(price string, currency string) string {
 	if price == "" {
 		return "Contact for pricing"
 	}
-	// Basic price formatting (add $ if not present)
-	if !strings.HasPrefix(price, "$") && !strings.HasPrefix(price, "€") && !strings.HasPrefix(price, "£") {
-		return "$" + price
+
+	currencySymbol := "$"
+	if currency == "€" || currency == "EUR" {
+		currencySymbol = "€"
+	} else if currency == "£" || currency == "GBP" {
+		currencySymbol = "£"
 	}
-	return price
+
+	// If price already has a symbol, don't add another
+	if strings.HasPrefix(price, "$") || strings.HasPrefix(price, "€") || strings.HasPrefix(price, "£") {
+		return price
+	}
+
+	return currencySymbol + price
 }
 
-func parseFeatures(featuresStr string) []string {
-	if featuresStr == "" {
-		return []string{}
-	}
-	// Split by comma, semicolon, or newline
-	features := strings.FieldsFunc(featuresStr, func(r rune) bool {
-		return r == ',' || r == ';' || r == '\n'
-	})
-
-	var cleaned []string
-	for _, f := range features {
-		trimmed := strings.TrimSpace(f)
-		if trimmed != "" {
-			cleaned = append(cleaned, trimmed)
-		}
-	}
-	return cleaned
-}
-
-func aggregateImages(prop XMLProperty) []string {
-	var images []string
-
-	addAll := func(list []string) {
-		for _, img := range list {
-			for _, token := range strings.Fields(img) {
-				trimmed := strings.TrimSpace(token)
-				if trimmed != "" {
-					images = append(images, trimmed)
-				}
-			}
-		}
-	}
-
-	addIf := func(s string) {
-		s = strings.TrimSpace(s)
-		if s != "" {
-			for _, token := range strings.Fields(s) {
-				trimmed := strings.TrimSpace(token)
-				if trimmed != "" {
-					images = append(images, trimmed)
-				}
-			}
-		}
-	}
-
-	addAll(prop.Images)
-	addAll(prop.Photos)
-	addAll(prop.Pictures)
-	addAll(prop.Picture)
-	addIf(prop.ImageURL)
-	addIf(prop.Image)
-
-	// Deduplicate while preserving order
-	seen := make(map[string]bool)
-	var unique []string
-	for _, img := range images {
-		if !seen[img] {
-			unique = append(unique, img)
-			seen[img] = true
-		}
-	}
-
-	return unique
-}
 
 func getExistingListings(contentDir string) (map[string]bool, error) {
 	existing := make(map[string]bool)
@@ -338,32 +348,40 @@ func writeListingFile(filename string, listing Listing) error {
 		return err
 	}
 
+	// Helper to safely format optional strings
+	formatOpt := func(v string) string {
+		if v == "" {
+			return "null"
+		}
+		return fmt.Sprintf(`"%s"`, escapeYAML(v))
+	}
+
 	// YAML frontmatter
-	frontmatter := fmt.Sprintf(`title: "%s"
-description: "%s"
+	frontmatter := fmt.Sprintf(`title: %s
+description: %s
 id: "%s"
-price: "%s"
-location: "%s"
-country: "%s"
-listingtype: "%s"
-bedrooms: "%s"
-bathrooms: "%s"
-area: "%s"
-yearbuilt: "%s"
+price: %s
+location: %s
+country: %s
+listingtype: %s
+bedrooms: %s
+bathrooms: %s
+area: %s
+yearbuilt: %s
 date: %d
 draft: false
 `,
-		escapeYAML(listing.Title),
-		escapeYAML(listing.Description),
+		formatOpt(listing.Title),
+		formatOpt(listing.Description),
 		listing.ID,
-		escapeYAML(listing.Price),
-		escapeYAML(listing.Location),
-		escapeYAML(listing.Country),
-		escapeYAML(listing.ListingType),
-		listing.Bedrooms,
-		listing.Bathrooms,
-		escapeYAML(listing.Area),
-		listing.YearBuilt,
+		formatOpt(listing.Price),
+		formatOpt(listing.Location),
+		formatOpt(listing.Country),
+		formatOpt(listing.ListingType),
+		formatOpt(listing.Bedrooms),
+		formatOpt(listing.Bathrooms),
+		formatOpt(listing.Area),
+		formatOpt(listing.YearBuilt),
 		time.Now().Unix(),
 	)
 
@@ -372,13 +390,14 @@ draft: false
 		return err
 	}
 
+	// Images array in frontmatter
 	if len(listing.Images) > 0 {
 		_, err = io.WriteString(file, "images:\n")
 		if err != nil {
 			return err
 		}
 		for _, img := range listing.Images {
-			_, err = io.WriteString(file, fmt.Sprintf("  - \"%s\"\n", escapeYAML(img)))
+			_, err = io.WriteString(file, fmt.Sprintf("  - %s\n", formatOpt(img)))
 			if err != nil {
 				return err
 			}
@@ -392,7 +411,7 @@ draft: false
 			return err
 		}
 		for _, feature := range listing.Features {
-			_, err = io.WriteString(file, fmt.Sprintf("  - \"%s\"\n", escapeYAML(feature)))
+			_, err = io.WriteString(file, fmt.Sprintf("  - %s\n", formatOpt(feature)))
 			if err != nil {
 				return err
 			}
@@ -400,20 +419,22 @@ draft: false
 	}
 
 	// Tags/taxonomies
-	_, err = io.WriteString(file, fmt.Sprintf("countries:\n  - \"%s\"\n", escapeYAML(listing.Country)))
-	if err != nil {
-		return err
+	if listing.Country != "" {
+		_, err = io.WriteString(file, fmt.Sprintf("countries:\n  - %s\n", formatOpt(listing.Country)))
+		if err != nil {
+			return err
+		}
 	}
 
 	if listing.Location != "" {
-		_, err = io.WriteString(file, fmt.Sprintf("locations:\n  - \"%s\"\n", escapeYAML(listing.Location)))
+		_, err = io.WriteString(file, fmt.Sprintf("locations:\n  - %s\n", formatOpt(listing.Location)))
 		if err != nil {
 			return err
 		}
 	}
 
 	if listing.ListingType != "" {
-		_, err = io.WriteString(file, fmt.Sprintf("types:\n  - \"%s\"\n", escapeYAML(listing.ListingType)))
+		_, err = io.WriteString(file, fmt.Sprintf("types:\n  - %s\n", formatOpt(listing.ListingType)))
 		if err != nil {
 			return err
 		}
@@ -427,7 +448,7 @@ draft: false
 	// Write content
 	content := listing.Description
 	if content == "" {
-		content = "Premium property listing with curated details and investment potential."
+		content = "Premium property listing."
 	}
 
 	_, err = io.WriteString(file, content)

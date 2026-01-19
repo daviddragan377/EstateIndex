@@ -1,0 +1,34 @@
+---
+title: "Seaside Splendor: 1-Bedroom in La Sirene at Port de La Mer"
+description: null
+id: "19705-LaSirene-1BR"
+price: "$280191"
+location: "Dubai"
+country: "United Arab Emirates"
+listingtype: "Apartment"
+bedrooms: "1"
+bathrooms: "1"
+area: "73 sq meters"
+yearbuilt: "2024"
+date: 1768847371
+draft: false
+images:
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-BR-01-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-LV-02-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-K-01-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-L-01-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-4-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-1-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-2-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-5-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-6-06_06_21-V1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-8-06_06_21-V1.jpg"
+countries:
+  - "United Arab Emirates"
+locations:
+  - "Dubai"
+types:
+  - "Apartment"
+---
+
+Premium property listing.

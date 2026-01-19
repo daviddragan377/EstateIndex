@@ -1,0 +1,30 @@
+---
+title: "Opulent Studio Apartment | Unparalleled Coastal Elegance in Hayat island"
+description: null
+id: "19705-MarDelQuattro-Studio"
+price: "$238257"
+location: null
+country: "United Arab Emirates"
+listingtype: "Apartment"
+bedrooms: "0"
+bathrooms: "1"
+area: "38 sq meters"
+yearbuilt: "2026"
+date: 1768847372
+draft: false
+images:
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM-2-Square.png"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM-3-Square.png"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM-4-Square.png"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM-5-Square.png"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM-6-Square.png"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1-79.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/AMN_-Reception-scaled.png"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM_AMN-Cafe-scaled-1.jpg"
+countries:
+  - "United Arab Emirates"
+types:
+  - "Apartment"
+---
+
+Premium property listing.

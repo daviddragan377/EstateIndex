@@ -1,0 +1,32 @@
+---
+title: "Nyala Villas 1 Bedroom"
+description: null
+id: "19705-Nyala1BR"
+price: "$209000"
+location: "Badung Regency"
+country: "Indonesia"
+listingtype: "Villa"
+bedrooms: "1"
+bathrooms: "1"
+area: "77 sq meters"
+yearbuilt: "0"
+date: 1768847365
+draft: false
+images:
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00005-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00006-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00007-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00008-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00001-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00002-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00003-1.jpg"
+  - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01-One-Bed_00004-1.jpg"
+countries:
+  - "Indonesia"
+locations:
+  - "Badung Regency"
+types:
+  - "Villa"
+---
+
+Premium property listing.

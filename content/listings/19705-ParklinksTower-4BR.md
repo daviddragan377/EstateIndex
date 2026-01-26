@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "306 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/4BR_Sky_Villa_2_-_Copy_olv3uv-3.jpg"

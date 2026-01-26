@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "188 sq meters"
 yearbuilt: "2024"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-BR-01-06_06_21-V1.jpg"

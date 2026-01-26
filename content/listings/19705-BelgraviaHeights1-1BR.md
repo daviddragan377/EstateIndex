@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "67 sq meters"
 yearbuilt: "2022"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_Belgravia_Heights_I_Exterior_Visual_Balconies_djiqhn-1.jpg"

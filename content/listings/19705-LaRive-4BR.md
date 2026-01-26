@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "254 sq meters"
 yearbuilt: "2021"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/C3-1123-1.jpg"

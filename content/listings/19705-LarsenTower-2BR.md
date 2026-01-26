@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "54 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/IMG_4896_krc4es-1.jpg"

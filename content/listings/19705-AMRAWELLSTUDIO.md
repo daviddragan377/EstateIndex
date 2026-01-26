@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "46.45 sq meters"
 yearbuilt: "0"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/10/Amra19.jpg"

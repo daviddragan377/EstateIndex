@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "78 sq meters"
 yearbuilt: "2021"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Belgravia-3-kids-play-2.jpg"

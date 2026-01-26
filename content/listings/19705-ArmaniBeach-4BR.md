@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "587 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/231026-arch-closeup-03-full-chanel-1.jpg"

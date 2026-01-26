@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: null
 area: "42 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_Kensington_Waters_Bedroom_copy_rkuc8d.jpg"

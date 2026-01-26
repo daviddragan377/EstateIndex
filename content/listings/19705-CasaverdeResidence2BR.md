@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "3"
 area: "183.14 sq meters"
 yearbuilt: "0"
-date: 1769459833
+date: 1769461566
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/10/LIVING-VIEW-2.jpg"

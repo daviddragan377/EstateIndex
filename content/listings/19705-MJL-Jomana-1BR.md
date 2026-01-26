@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "175 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/MJL-JOMANA-EXT-02-MAR-2023-1.jpg"

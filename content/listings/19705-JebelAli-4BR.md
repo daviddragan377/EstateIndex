@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "393 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_10-18-1.avif"

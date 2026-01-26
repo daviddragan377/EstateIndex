@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "75 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Flora-Isle-2BR-Balcony-hd.jpg"

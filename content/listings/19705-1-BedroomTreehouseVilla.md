@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "118 sq meters"
 yearbuilt: "0"
-date: 1769459836
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/08/Untitled-design-6.jpg"

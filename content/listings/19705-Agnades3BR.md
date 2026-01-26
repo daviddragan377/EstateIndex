@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "154.54 sq meters"
 yearbuilt: "0"
-date: 1769459833
+date: 1769461567
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/Agnades-Village-1_V3-1.jpg"

@@ -1,0 +1,57 @@
+# Vercel Ignore File
+# Files to exclude from deployment
+
+# Build outputs (rebuilt on deploy)
+public/
+.vercel/
+.hugo_build.lock
+
+# API functions (not needed for static deployment)
+api/
+
+# Dependencies (reinstalled on deploy)
+node_modules/
+
+# Development files
+.env
+.env.local
+.env*.local
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Documentation (not needed on server)
+*.md
+ARCHITECTURE.md
+BUILD_SUMMARY.md
+CHANGELOG.md
+DEPLOYMENT_CHECKLIST.md
+IMPLEMENTATION_COMPLETE.md
+IMPLEMENTATION_REPORT.md
+IMPLEMENTATION.md
+QUICKSTART.md
+README.md
+XML_PARSER_FIX.md
+URL_ROUTING_CONFIG.md
+DEPLOYMENT_GUIDE.md
+URL_ROUTING_IMPLEMENTATION.md
+
+# Test files
+test_*.sh
+xml_feed.txt
+
+# Scripts (kept: build, config, etc. are needed for cron)
+scripts/watch.sh
+scripts/setup.sh
+scripts/deploy.sh
+
+# Agent resources
+agent_resources/
+
+# npm scripts (keep package.json, keep node_modules ignored above)

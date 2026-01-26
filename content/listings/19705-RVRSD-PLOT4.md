@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: null
 yearbuilt: "0"
-date: 1769459836
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/ef22dca4d36e01446f3c22cd448e158950072bd0.jpg"

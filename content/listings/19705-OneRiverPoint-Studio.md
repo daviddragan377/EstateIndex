@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "45 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/One-River-Point_Bathroom.jpg"

@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "35 sq meters"
 yearbuilt: "2024"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Binghatti_Corner_Bedroom1_2023-05-31.jpg"

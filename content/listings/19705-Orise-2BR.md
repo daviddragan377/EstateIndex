@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "113 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/ME1789_VP04_Interior_Living.jpg"

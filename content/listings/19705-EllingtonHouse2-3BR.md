@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "162 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington-House-II_Apartment_Living-Room.jpg"

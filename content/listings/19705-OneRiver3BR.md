@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "222 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/One_River_Point_Hero_shot.jpg"

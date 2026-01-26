@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "539 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/5-bed-Type-D_Fromal-Living-3.jpg"

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "92 sq meters"
 yearbuilt: "2022"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_Harrington-House_ARC_Hero-Shot-Day_With-People.jpg"

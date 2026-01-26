@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "143 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Design-Quarter-D3-INT-BR-01-MAR-2023-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "49 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/QDM_AMN-Fitness-scaled-1.jpg"

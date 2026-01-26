@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "109 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_Kensington_Waters_BBQ_Deck_hy94c3-2.jpg"

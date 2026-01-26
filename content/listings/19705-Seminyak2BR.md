@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "95 sq meters"
 yearbuilt: "2027"
-date: 1769459833
+date: 1769461566
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/STO-INTERIOR_35.jpg"

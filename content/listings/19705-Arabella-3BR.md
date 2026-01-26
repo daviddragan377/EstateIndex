@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "215 sq meters"
 yearbuilt: "2020"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/DSC_3664-1.jpg"

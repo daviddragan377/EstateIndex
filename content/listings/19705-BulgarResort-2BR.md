@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "177 sq meters"
 yearbuilt: "2017"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Meraas-Bulgari-Residence-6976-1.jpg"

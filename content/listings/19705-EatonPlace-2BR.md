@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "106 sq meters"
 yearbuilt: "2018"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Eaton-Place-Model-Suite-Living-Room.jpg"

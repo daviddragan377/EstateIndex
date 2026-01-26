@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "38.49 sq meters"
 yearbuilt: "0"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/CARM_231018_Aerial_5.2_2.jpg"

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "212.6 sq meters"
 yearbuilt: "0"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/v8.jpg"

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "92 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1-Bedroom-2.jpg"

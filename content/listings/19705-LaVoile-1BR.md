@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "73 sq meters"
 yearbuilt: "2022"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/BEDROOM-V2-1.jpg"

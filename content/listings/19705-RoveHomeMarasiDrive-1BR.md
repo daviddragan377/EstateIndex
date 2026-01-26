@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "56 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/RV2_24_STUDIO_Square_Down_Up_EF_V1_pnk2rf-1.jpg"

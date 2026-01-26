@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "883 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Building_B_6_Floor_-_Page_15_PDF_Presentation_al48yx-3.jpg"

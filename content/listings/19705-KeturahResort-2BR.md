@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "143 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/DUBMAG1_CCD_Facades_Concept_Architectural_Report_July_2021-26_kogfhv-1.jpg"

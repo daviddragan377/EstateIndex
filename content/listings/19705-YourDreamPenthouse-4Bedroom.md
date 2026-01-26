@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "3"
 area: "269 sq meters"
 yearbuilt: "0"
-date: 1769459836
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/Screenshot-2025-09-11-130854.png"

@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "846 sq meters"
 yearbuilt: "2017"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/V_LIVING_RESIDENCES_1-1.jpg"

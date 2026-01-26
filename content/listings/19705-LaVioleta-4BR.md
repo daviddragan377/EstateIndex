@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "3"
 area: "216 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/02/La-Violeta-GR-Ext-03-scaled-1.jpg"

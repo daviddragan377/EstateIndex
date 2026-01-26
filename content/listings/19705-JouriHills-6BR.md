@@ -10,7 +10,7 @@ bedrooms: "7"
 bathrooms: "7"
 area: "1131 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Jour-hills-3-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "4"
 area: "344 sq meters"
 yearbuilt: "2021"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/02/19103-Meraas-La-Mer-North-Master-Bedroom-Rev04_1.jpg"

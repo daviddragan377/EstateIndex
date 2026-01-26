@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "349 sq meters"
 yearbuilt: "0"
-date: 1769459833
+date: 1769461566
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/HILL-RISE-PHASE-V-VILLA-02-3D_DAY2.jpg"

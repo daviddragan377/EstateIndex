@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "103 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Master_Bedroom_opt2_07.14.22_rglruv.jpg"

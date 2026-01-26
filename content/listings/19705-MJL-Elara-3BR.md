@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "4"
 area: "179 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/MJL-Elara-Ext-08-scaled-1.jpg"

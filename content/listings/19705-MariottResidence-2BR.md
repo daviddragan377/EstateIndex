@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "138 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Living_Room_view_2_10.11.22_hhs0fy-1.jpg"

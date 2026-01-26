@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "149 sq meters"
 yearbuilt: "2025"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_Kensington_Waters_Pool_and_Pavilion_shltwe-3.jpg"

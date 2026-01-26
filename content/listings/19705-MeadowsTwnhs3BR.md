@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "208.6 sq meters"
 yearbuilt: "0"
-date: 1769459836
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A1_The-Meadows-townhouses-La-Cala-Golf-entrance_Oct-24_2.jpg"

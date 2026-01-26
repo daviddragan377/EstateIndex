@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "113.4 sq meters"
 yearbuilt: "0"
-date: 1769459836
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A1-Allure-Alenda-golf-apartments-May24_2.jpg"

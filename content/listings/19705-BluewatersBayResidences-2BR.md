@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "115 sq meters"
 yearbuilt: "2027"
-date: 1769459837
+date: 1769461571
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/02/BLUEWATERS-BAY-INT-BR.jpg"

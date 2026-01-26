@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "590 sq meters"
 yearbuilt: "2026"
-date: 1769459837
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_2-43-1.jpg"

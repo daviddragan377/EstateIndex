@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "97.74 sq meters"
 yearbuilt: "0"
-date: 1769459836
+date: 1769461570
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A1_Iconic_Gran-Alacant_properties.jpg"

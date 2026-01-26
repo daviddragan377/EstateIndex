@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: null
 yearbuilt: "0"
-date: 1769459833
+date: 1769461566
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/Photo_00020.jpg"

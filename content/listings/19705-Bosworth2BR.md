@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "61 sq meters"
 yearbuilt: "0"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/Bosworth_House_B_High_res1.jpg"

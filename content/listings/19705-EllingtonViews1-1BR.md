@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "86 sq meters"
 yearbuilt: "2027"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_Views_I_-_living_area_2_f4um9s-1.jpg"

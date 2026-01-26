@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "360.8 sq meters"
 yearbuilt: "2023"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/Hutan-Reshoot_00006.jpg"

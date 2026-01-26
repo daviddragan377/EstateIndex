@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "25 sq meters"
 yearbuilt: "2024"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Binghatti-Interior-Render-1.jpg"

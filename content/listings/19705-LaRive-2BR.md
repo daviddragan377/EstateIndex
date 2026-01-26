@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "112 sq meters"
 yearbuilt: "2021"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/HERO-1-1.jpg"

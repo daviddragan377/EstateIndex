@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "374 sq meters"
 yearbuilt: "2027"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/The_Riverine_villa_-_back_view_cmizdi-1.jpg"

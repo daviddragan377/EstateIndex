@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "5"
 area: "626 sq meters"
 yearbuilt: "2017"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/CAM_01-1.jpg"

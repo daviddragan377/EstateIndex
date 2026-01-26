@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "40 sq meters"
 yearbuilt: "2025"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ellington_House_3_-_Apartment_Bedroom_vnihyy.jpg"

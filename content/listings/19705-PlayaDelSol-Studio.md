@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: null
 area: "38 sq meters"
 yearbuilt: "2027"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Playa_del_Sol_-_bedroom_r8lz92.png"

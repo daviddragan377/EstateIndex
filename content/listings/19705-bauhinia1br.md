@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "51 sq meters"
 yearbuilt: "0"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/07/1-BR-Residence-2-scaled.jpg"

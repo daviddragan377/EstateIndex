@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "273 sq meters"
 yearbuilt: "2028"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/BedroomPenthouse_02.jpg"

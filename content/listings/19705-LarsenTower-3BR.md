@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "78 sq meters"
 yearbuilt: "2025"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/IMG_4891_i6caen-2.jpg"

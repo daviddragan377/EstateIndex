@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "1304 sq meters"
 yearbuilt: "2026"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Ocean_House_by_Ellington_-_Penthouse_private_pool_cdlwxs-3.png"

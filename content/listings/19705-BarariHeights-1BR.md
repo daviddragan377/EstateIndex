@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "64 sq meters"
 yearbuilt: "2028"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/bedroom01_uwqkin-1.jpg"

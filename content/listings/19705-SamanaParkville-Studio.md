@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "39 sq meters"
 yearbuilt: "2028"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Blue_hour_eye_level_k5wys5.jpg"

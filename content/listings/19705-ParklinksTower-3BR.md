@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "192 sq meters"
 yearbuilt: "2027"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/3BR_Horizon_Villa_-_Copy_xydmbm-2.jpg"

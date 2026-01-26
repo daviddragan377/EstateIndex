@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "328 sq meters"
 yearbuilt: "2024"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/V6B_elevation-dusk-2.jpg"

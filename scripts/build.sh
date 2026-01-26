@@ -10,6 +10,13 @@ CONTENT_DIR="$PROJECT_ROOT/content/listings"
 CMD_DIR="$PROJECT_ROOT/cmd/xmlsync"
 BUILD_DIR="$PROJECT_ROOT/public"
 
+# Load configuration from .env
+source "$SCRIPT_DIR/config.sh" || true
+
+# Set defaults if config.sh didn't load them
+BASE_URL="${BASE_URL:-https://estateindex.com/}"
+HUGO_ENV="${HUGO_ENV:-development}"
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -83,10 +90,11 @@ echo ""
 # Step 3: Build site with Hugo
 if [ "$DRY_RUN" = false ]; then
   echo -e "${BLUE}Step 3: Building site with Hugo...${NC}"
+  echo -e "  Base URL: $BASE_URL"
   cd "$PROJECT_ROOT"
   
   if command -v hugo &> /dev/null; then
-    if hugo --cleanDestinationDir 2>&1; then
+    if hugo -b "$BASE_URL" -e "$HUGO_ENV" --cleanDestinationDir 2>&1; then
       echo -e "${GREEN}✓ Site built successfully${NC}"
       echo -e "  Output: $BUILD_DIR"
     else

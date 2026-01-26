@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "3"
 area: "112 sq meters"
 yearbuilt: "2027"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/02/City-Walk-Northline-1-Ext-03.jpg"

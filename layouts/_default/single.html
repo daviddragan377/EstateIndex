@@ -1,0 +1,192 @@
+{{ define "main" }}
+<article class="py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8 pb-6 border-b border-gray-200">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+        {{ .Title }}
+      </h1>
+      
+      <div class="flex flex-wrap gap-3 mb-4">
+        {{ if .Params.country }}
+          <span class="badge badge-primary">{{ .Params.country }}</span>
+        {{ end }}
+        {{ if .Params.location }}
+          <span class="badge badge-secondary">{{ .Params.location }}</span>
+        {{ end }}
+        {{ if .Params.listingtype }}
+          <span class="badge badge-secondary">{{ .Params.listingtype }}</span>
+        {{ end }}
+      </div>
+      
+      <p class="text-2xl md:text-3xl font-serif font-bold text-navy">
+        {{ .Params.price | default "Contact for pricing" }}
+      </p>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Left: Media + Details -->
+      <div class="lg:col-span-2 space-y-10">
+        <!-- Carousel -->
+        {{ $hasImages := and .Params.images (gt (len .Params.images) 0) }}
+        <div class="carousel" data-images='{{ with .Params.images }}{{ jsonify . }}{{ else }}[]{{ end }}'>
+          <div class="carousel-viewport">
+            {{ if $hasImages }}
+              {{ $first := index .Params.images 0 }}
+              <a id="carousel-main-link" href="{{ $first }}" target="_blank" rel="noopener">
+                <img id="carousel-main" src="{{ $first }}" alt="{{ .Title }}" class="carousel-image" loading="lazy" />
+              </a>
+            {{ else }}
+              <div class="carousel-placeholder">
+                <span>No media available</span>
+              </div>
+            {{ end }}
+          </div>
+          {{ if $hasImages }}
+          <div class="carousel-controls">
+            <button class="carousel-btn" data-dir="prev">‹</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <button class="carousel-btn" data-dir="next">›</button>
+          </div>
+          <div class="carousel-thumbs" id="carousel-thumbs">
+            {{ range $i, $img := .Params.images }}
+              <button class="carousel-thumb" data-index="{{ $i }}">
+                <img src="{{ $img }}" alt="{{ $.Title }} thumbnail {{ add $i 1 }}" loading="lazy" />
+              </button>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+
+        <!-- Description -->
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4">Property Overview</h2>
+          <div class="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+            {{ .Content }}
+          </div>
+        </div>
+        
+        {{ if .Params.features }}
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4">Key Features</h2>
+          <ul class="space-y-3 text-gray-700">
+            {{ range .Params.features }}
+            <li class="flex items-start">
+              <span class="text-navy font-bold mr-3">✓</span>
+              <span>{{ . }}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+      
+      <!-- Sidebar CTA -->
+      <div>
+        <div class="p-6 bg-gradient-light rounded-lg border border-gray-200 shadow-md sticky top-24 space-y-6">
+          <div>
+            <p class="text-sm text-gray-600 mb-1">Price</p>
+            <p class="text-3xl font-serif font-bold text-navy">{{ .Params.price | default "Contact for pricing" }}</p>
+          </div>
+
+          <div class="space-y-3 text-gray-700 text-sm border-t border-gray-200 pt-4">
+            {{ if .Params.location }}<div><span class="font-semibold">Location:</span> {{ .Params.location }}</div>{{ end }}
+            {{ if .Params.country }}<div><span class="font-semibold">Country:</span> {{ .Params.country }}</div>{{ end }}
+            {{ if .Params.listingtype }}<div><span class="font-semibold">Type:</span> {{ .Params.listingtype }}</div>{{ end }}
+            {{ if .Params.area }}<div><span class="font-semibold">Area:</span> {{ .Params.area }}</div>{{ end }}
+            {{ if .Params.bedrooms }}<div><span class="font-semibold">Bedrooms:</span> {{ .Params.bedrooms }}</div>{{ end }}
+            {{ if .Params.bathrooms }}<div><span class="font-semibold">Bathrooms:</span> {{ .Params.bathrooms }}</div>{{ end }}
+            {{ if .Params.yearbuilt }}<div><span class="font-semibold">Year Built:</span> {{ .Params.yearbuilt }}</div>{{ end }}
+          </div>
+
+          <div class="space-y-3 border-t border-gray-200 pt-4">
+            <a href="mailto:hello@estateindex.example.com?subject=Enquiry%20about%20{{ .Params.id | urlize }}&body=I%20am%20interested%20in%20learning%20more%20about%20this%20property:%20{{ .Title }}" class="btn-primary block text-center w-full">
+              Enquire Now
+            </a>
+            {{ if and .Params.images (gt (len .Params.images) 0) }}
+            <a href="{{ index .Params.images 0 }}" target="_blank" rel="noopener" class="btn-secondary block text-center w-full">
+              View Full Media
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Listings -->
+    {{ $related := where (where .Site.RegularPages "Section" "listings") "Params.country" .Params.country }}
+    {{ $related = first 3 (where $related "RelPermalink" "!=" .RelPermalink) }}
+    {{ if $related }}
+    <div class="mt-16 pt-12 border-t border-gray-200">
+      <h2 class="text-3xl font-serif font-bold text-gray-900 mb-8">Similar Properties</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ range $related }}
+          {{ partial "listing-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</article>
+
+<script>
+(function() {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+  const images = JSON.parse(carousel.dataset.images || '[]');
+  if (!images.length) return;
+
+  let index = 0;
+  const main = document.getElementById('carousel-main');
+  const mainLink = document.getElementById('carousel-main-link');
+  const dots = document.getElementById('carousel-dots');
+  const thumbs = document.getElementById('carousel-thumbs');
+
+  function renderIndicators() {
+    if (!dots) return;
+    dots.innerHTML = '';
+    images.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === index ? ' active' : '');
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => goTo(i));
+      dots.appendChild(dot);
+    });
+  }
+
+  function syncThumbs() {
+    if (!thumbs) return;
+    thumbs.querySelectorAll('.carousel-thumb').forEach((btn, i) => {
+      btn.classList.toggle('active', i === index);
+    });
+  }
+
+  function goTo(i) {
+    if (!images[i]) return;
+    index = i;
+    main.src = images[i];
+    mainLink.href = images[i];
+    renderIndicators();
+    syncThumbs();
+  }
+
+  carousel.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dir = btn.dataset.dir === 'next' ? 1 : -1;
+      const next = (index + dir + images.length) % images.length;
+      goTo(next);
+    });
+  });
+
+  if (thumbs) {
+    thumbs.querySelectorAll('.carousel-thumb').forEach(btn => {
+      btn.addEventListener('click', () => goTo(parseInt(btn.dataset.index, 10)));
+    });
+  }
+
+  renderIndicators();
+  syncThumbs();
+})();
+</script>
+{{ end }}

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "96.17 sq meters"
 yearbuilt: "0"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/10/Kitchen-1_2.jpg"

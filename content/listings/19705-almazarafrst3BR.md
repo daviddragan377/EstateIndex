@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "108.83 sq meters"
 yearbuilt: "2026"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A6.0_Almazara-FOREST_apartments_Istan_Marbella_facade-Abr-2024_2.jpg"

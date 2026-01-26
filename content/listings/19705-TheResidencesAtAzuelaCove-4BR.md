@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "377 sq meters"
 yearbuilt: "2023"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/The_Residences_at_Azuela_Cove_-_Seaview_Horizon_Suite_Balcony_copy_wunlyz-1.jpg"

@@ -16,10 +16,10 @@
   <link rel="canonical" href="{{ .Permalink }}" />
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="{{ relURL "css/main.css" }}" />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="{{ relURL "favicon.ico" }}" />
 </head>
 <body class="antialiased bg-white text-gray-900">
   {{ partial "header.html" . }}
@@ -30,6 +30,6 @@
   
   {{ partial "footer.html" . }}
   
-  <script src="/js/main.js"></script>
+  <script src="{{ relURL "js/main.js" }}"></script>
 </body>
 </html>

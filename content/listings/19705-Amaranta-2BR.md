@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "3"
 area: "166 sq meters"
 yearbuilt: "2022"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/02/Amaranta-EXT-15.jpg"

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "107.48 sq meters"
 yearbuilt: "2027"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A5-Fuente-Lirios-apartments-Benahavis-Solarium.jpg"

@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "38 sq meters"
 yearbuilt: "2027"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Electra_40.jpg"

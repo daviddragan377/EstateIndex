@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "51 sq meters"
 yearbuilt: "2026"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/Copy-of-1-bedroom-sumba-rev_22-Photo-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "151.91 sq meters"
 yearbuilt: "0"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/Roof-Garden-_00.jpg"

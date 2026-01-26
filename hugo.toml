@@ -1,9 +1,15 @@
+# Base URL is configured via -b flag when running hugo commands
+# See scripts/build.sh and package.json for how this is passed
 baseURL = "https://estateindex.example.com/"
 languageCode = "en-us"
 title = "Estate Index | Global Property Intelligence"
 enableRobotsTXT = true
 enableGitInfo = true
 removePathAccents = true
+
+# Relative URL configuration
+relativeURLs = false
+canonifyURLs = true
 
 # Output formats
 [outputs]
@@ -42,15 +48,15 @@ unsafe = false
 [menu]
 [[menu.main]]
 name = "Browse"
-url = "/listings/"
+url = "listings/"
 weight = 1
 
 [[menu.main]]
 name = "Locations"
-url = "/locations/"
+url = "locations/"
 weight = 2
 
 [[menu.main]]
 name = "About"
-url = "/about/"
+url = "about/"
 weight = 3

@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "428.03 sq meters"
 yearbuilt: "0"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/Azalea-Villas-3-2.jpg"

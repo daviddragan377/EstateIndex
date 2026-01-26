@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "240 sq meters"
 yearbuilt: "2024"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/La-Sirene-Ex-5-06_06_21-V1.jpg"

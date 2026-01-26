@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "90 sq meters"
 yearbuilt: "2026"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/01_SOBHA_Extension_Master_BR.jpg"

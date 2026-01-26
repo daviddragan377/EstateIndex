@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "576 sq meters"
 yearbuilt: "2026"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/NB_Collection_-_Villa_B_Entrance_yhpyvm-1.jpg"

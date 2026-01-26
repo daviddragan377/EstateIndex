@@ -41,8 +41,12 @@
 </div>
 
 <script>
+// Determine the base path from the page's current location
+const basePath = document.currentScript.src.split('/js/')[0] || '';
+const searchIndexPath = basePath + '/index.json';
+
 // Load search data
-fetch('/index.json')
+fetch(searchIndexPath)
   .then(response => response.json())
   .then(data => {
     window.searchIndex = data;

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "4"
 area: "325 sq meters"
 yearbuilt: "0"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/10/16.-ex-19-184-TALA-bathroom.jpg"

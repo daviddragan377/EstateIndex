@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "4"
 area: "168 sq meters"
 yearbuilt: "2025"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/02/MJL-Al-Jazi-EXT-05-June-2022-scaled-1.jpg"

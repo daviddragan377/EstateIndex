@@ -1,51 +1,28 @@
-<header class="bg-navy sticky top-0 z-50 shadow-md">
+<header class="bg-gradient-primary text-white sticky top-0 z-50 shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href="/" class="flex items-center space-x-3">
-        <img src="/img/estateindex_logo.png" alt="Estate Index" class="h-10 w-auto">
+      <!-- Logo & Brand -->
+      <a href="{{ relURL "" }}" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <div class="w-10 h-10 rounded-lg bg-beige flex items-center justify-center font-serif font-bold text-navy">EI</div>
         <span class="font-serif font-bold text-white hidden sm:inline text-lg">Estate Index</span>
       </a>
       
-      <!-- Navigation -->
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="/listings/" class="text-offwhite hover:text-white transition-colors">Browse</a>
-        
-        <!-- Countries Dropdown -->
-        <div class="relative group">
-          <button class="text-offwhite hover:text-white transition-colors flex items-center space-x-1">
-            <span>Countries</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </button>
-          
-          <!-- Dropdown Menu -->
-          <div class="absolute left-0 mt-0 w-48 bg-white text-navy rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2 z-50">
-            {{- $countries := slice }}
-            {{- range where site.RegularPages "Section" "listings" }}
-              {{- range .Params.countries }}
-                {{- if not (in $countries .) }}
-                  {{- $countries = $countries | append . }}
-                {{- end }}
-              {{- end }}
-            {{- end }}
-            {{- range sort $countries }}
-              <a href="/search?country={{ . | urlize }}" class="block px-4 py-2 hover:bg-gray-100 transition-colors">{{ . }}</a>
-            {{- end }}
-          </div>
-        </div>
-        
-        <a href="/locations/" class="text-offwhite hover:text-white transition-colors">Markets</a>
-        <a href="/about/" class="text-offwhite hover:text-white transition-colors">About</a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="{{ relURL "listings/" }}" class="text-offwhite hover:text-beige transition-colors font-medium">Browse Listings</a>
+        <a href="{{ relURL "locations/" }}" class="text-offwhite hover:text-beige transition-colors font-medium">Markets</a>
+        <a href="{{ relURL "about/" }}" class="text-offwhite hover:text-beige transition-colors font-medium">About</a>
       </nav>
       
-      <!-- Actions -->
-      <div class="flex items-center space-x-4">
-        <a href="/search/" class="text-offwhite hover:text-white transition-colors">Search</a>
-        <a href="/compare/" class="flex items-center space-x-1 text-offwhite hover:text-white transition-colors">
-          <span>Compare</span>
-          <span id="comparison-badge" class="inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-navy bg-beige rounded-full hidden">0</span>
+      <!-- Right Actions -->
+      <div class="flex items-center gap-4">
+        <a href="{{ relURL "listings/" }}" class="hidden sm:inline px-4 py-2 bg-beige text-navy font-semibold rounded-lg hover:bg-white transition-colors">
+          Browse
+        </a>
+        <a href="mailto:hello@estateindex.example.com" class="text-offwhite hover:text-beige transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
         </a>
       </div>
     </div>

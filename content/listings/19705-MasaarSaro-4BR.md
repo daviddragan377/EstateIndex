@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "329 sq meters"
 yearbuilt: "0"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/230720-Townhouse-backside-hi-res.jpg"

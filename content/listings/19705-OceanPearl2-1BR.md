@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "81 sq meters"
 yearbuilt: "2027"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/livingroom4.0000_raxgo9-1.jpg"

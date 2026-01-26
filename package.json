@@ -4,13 +4,13 @@
   "description": "Production-ready static property listings website",
   "private": true,
   "scripts": {
-    "build": "./scripts/build.sh",
+    "build": "bash ./scripts/config.sh && bash ./scripts/build.sh",
     "build:css": "mkdir -p static/css && cp assets/css/main.css static/css/main.css",
-    "build:assets": "mkdir -p static/js && cp assets/js/main.js static/js/main.js",
+    "build:assets": "mkdir -p static/js && cp assets/js/main.js static/js/main.js && cp assets/js/path-utils.js static/js/path-utils.js",
     "setup:assets": "npm run build:css && npm run build:assets",
-    "sync": "./scripts/sync.sh",
-    "dev": "hugo server",
-    "watch": "./scripts/watch.sh",
-    "deploy": "./scripts/deploy.sh"
+    "sync": "bash -c '. scripts/config.sh && ./scripts/sync.sh'",
+    "dev": "bash -c '. scripts/config.sh && hugo server -b \"$BASE_URL\" -e \"$HUGO_ENV\"'",
+    "watch": "bash -c '. scripts/config.sh && ./scripts/watch.sh'",
+    "deploy": "bash -c '. scripts/config.sh && ./scripts/deploy.sh'"
   }
 }

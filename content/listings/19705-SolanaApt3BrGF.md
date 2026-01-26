@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "101.71 sq meters"
 yearbuilt: "2026"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A2_Solana-Village-apartments-La-Cala-Golf-pool_March-2025_2.jpg"

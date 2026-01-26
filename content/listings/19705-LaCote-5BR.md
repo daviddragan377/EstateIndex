@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "6"
 area: "520 sq meters"
 yearbuilt: "2020"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/C1-new.bmp"

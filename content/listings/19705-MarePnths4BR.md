@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "3"
 area: "150.48 sq meters"
 yearbuilt: "2026"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A5.2_Mare-PENTHOUSE-Marbella-terrace-Jul25.jpg"

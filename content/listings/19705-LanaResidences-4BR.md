@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "715 sq meters"
 yearbuilt: "2022"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/The-Residences-2BD-2.jpg"

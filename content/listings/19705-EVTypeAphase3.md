@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "133 sq meters"
 yearbuilt: "0"
-date: 1768847370
+date: 1769451995
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/LINE_ALBUM_show-house-Type-A_251102_19.jpg"

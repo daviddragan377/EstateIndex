@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "147 sq meters"
 yearbuilt: "0"
-date: 1768847365
+date: 1769451989
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/Копия-V10_BTR2_V1.0.jpg"

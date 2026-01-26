@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "50 sq meters"
 yearbuilt: "2026"
-date: 1768847371
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/The_Quayside_-_lobby_xlhxbv.jpg"

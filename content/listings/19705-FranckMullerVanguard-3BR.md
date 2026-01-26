@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "164 sq meters"
 yearbuilt: "2027"
-date: 1768847372
+date: 1769451997
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Zen-Room_2.jpg"

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "95.6 sq meters"
 yearbuilt: "2026"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A3_Mare-apartments-San-Pedro-de-Alcantara-Marbella-gardens_Aug23_2.jpg"

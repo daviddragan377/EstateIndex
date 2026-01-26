@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "260 sq meters"
 yearbuilt: "2027"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Central-Park-Plaza-Ext-02-1.jpg"

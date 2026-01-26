@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: null
 area: "39 sq meters"
 yearbuilt: "2023"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Kids_Swimming_Pool_ktmjzs.jpg"

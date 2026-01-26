@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "750 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/Volodin_614A4565-HDR.jpg"

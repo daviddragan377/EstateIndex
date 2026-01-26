@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "58 sq meters"
 yearbuilt: "2029"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/5-25.jpg"

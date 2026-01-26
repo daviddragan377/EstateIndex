@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "83.76 sq meters"
 yearbuilt: "2026"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B5.3-Sunny-Golf-apartments-Estepona-bedroom_Abril-24.jpg"

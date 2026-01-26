@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "117.71 sq meters"
 yearbuilt: "2027"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A2-Valley-Views-apartments-Mijas-entrance.jpg"

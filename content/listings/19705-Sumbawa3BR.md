@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "181 sq meters"
 yearbuilt: "2026"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/Copy-of-Master-Bedroom-View-6C.jpg"

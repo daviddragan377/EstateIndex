@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "116 sq meters"
 yearbuilt: "2026"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/MJL-JOMANA-INT-LV-MAR-2023-1-1.jpg"

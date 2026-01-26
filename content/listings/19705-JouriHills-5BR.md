@@ -10,7 +10,7 @@ bedrooms: "6"
 bathrooms: "6"
 area: "487 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Jouri-hills1-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "504 sq meters"
 yearbuilt: "0"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/BC3htk0ukREYMDWy0VbTjc6rMGQ-scaled.jpg"

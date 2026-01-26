@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "96.42 sq meters"
 yearbuilt: "2026"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A3.1_Eden-Beach-apartments-Torrevieja-swimming-pool_Nov-24_2.jpg"

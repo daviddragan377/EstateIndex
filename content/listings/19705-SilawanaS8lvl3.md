@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "76.8 sq meters"
 yearbuilt: "2026"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/SUITES-1-TO-10_RSR.jpg"

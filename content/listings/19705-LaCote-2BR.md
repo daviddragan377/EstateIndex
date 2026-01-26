@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "111 sq meters"
 yearbuilt: "2020"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/mth_de_pdm_View-09_a03-RET.bmp"

@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "42.46 sq meters"
 yearbuilt: "0"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/MG-1350-Investin-Bristol-Street-Exterior-Draft-V02-02.jpg"

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "167 sq meters"
 yearbuilt: "2018"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Belgravia_2_-_Actual_Photos_-_Bedroom_2_jqsu2j-3.jpg"

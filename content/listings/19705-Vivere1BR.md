@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "43 sq meters"
 yearbuilt: "0"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/INT_0052_FORSHAW_CHORUS_APARTMENT_KITCHEN_FINAL_0011.jpg"

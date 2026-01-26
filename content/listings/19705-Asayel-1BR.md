@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "71 sq meters"
 yearbuilt: "2023"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1-90.jpg"

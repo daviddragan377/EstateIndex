@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "38.6 sq meters"
 yearbuilt: "2025"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/FG_03_pyramid-chi_ext_cam01.jpg"

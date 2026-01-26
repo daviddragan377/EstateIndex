@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "123.17 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/02_Type-D-Front-02ED-1.jpg"

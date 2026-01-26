@@ -10,7 +10,7 @@ bedrooms: "0"
 bathrooms: "1"
 area: "33.5 sq meters"
 yearbuilt: "0"
-date: 1769451995
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/01_Studio_Apartment_00001.jpg"

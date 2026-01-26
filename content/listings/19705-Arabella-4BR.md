@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "283 sq meters"
 yearbuilt: "2020"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/DSC_3651-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "236 sq meters"
 yearbuilt: "2026"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/Копия-KMV04_BTR_V01_edited-1.jpg"

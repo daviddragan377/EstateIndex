@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "63 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/BEYOND_DMCPlot2F01_CGI01_02a_12K_Chalet-Roof-Terrace.jpg"

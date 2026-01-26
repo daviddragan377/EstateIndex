@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "87.05 sq meters"
 yearbuilt: "2027"
-date: 1769451995
+date: 1769459836
 draft: false
 countries:
   - "Spain"

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "207 sq meters"
 yearbuilt: "2026"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Granada_II_5_wnhshj-1.jpg"

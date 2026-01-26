@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "265 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/09/Elite-Residences_Master-Plan-3.jpg"

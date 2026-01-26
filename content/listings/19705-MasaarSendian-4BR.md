@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "350 sq meters"
 yearbuilt: "2023"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/V5B-Warm-Front-1.jpg"

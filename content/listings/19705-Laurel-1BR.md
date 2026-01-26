@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "69 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Central-Park-Laurel-Ext-02-7_9_22-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "206 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Penthouse_10.07.22_v2gxiq-3.jpg"

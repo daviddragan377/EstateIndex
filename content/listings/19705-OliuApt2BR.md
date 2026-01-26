@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "89.2 sq meters"
 yearbuilt: "0"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A1-Oliu-Capdepera-homes.jpg"

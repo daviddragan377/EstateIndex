@@ -10,7 +10,7 @@ bedrooms: "5"
 bathrooms: "5"
 area: "258 sq meters"
 yearbuilt: "2028"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/RA-JGE-VIEW_9_-LINEAR_PARK-FINAL-010125_lfc9cm-1.jpg"

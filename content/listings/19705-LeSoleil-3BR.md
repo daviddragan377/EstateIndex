@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "192 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/PDLM-LE-CIEL-EXT-01.jpg"

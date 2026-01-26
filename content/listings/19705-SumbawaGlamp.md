@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "36 sq meters"
 yearbuilt: "2026"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/12/Copy-of-WhatsApp-Image-2024-05-09-at-13.43.26_c09479db.jpg"

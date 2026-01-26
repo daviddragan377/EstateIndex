@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "3"
 area: "154 sq meters"
 yearbuilt: "2019"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/Val-41.jpg"

@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "190.72 sq meters"
 yearbuilt: "2026"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A1_Almazara_Views_townhouses_Istan_Marbella_views_Nov-23_2.jpg"

@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "63 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/10/LABELA_CAM_01_DAY_DRONE.jpg"

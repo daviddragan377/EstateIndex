@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "3"
 area: "546 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/07/ELOUNDA-HILLS-VILLA-2BD8.jpg"

@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "103 sq meters"
 yearbuilt: "2026"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/DU100_0022878_VIEW_18_C123_ARRIVAL_n5jnc4.jpg"

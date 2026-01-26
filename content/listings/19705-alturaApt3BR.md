@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "127.7 sq meters"
 yearbuilt: "2026"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/A4.1-Altura-160-apartments-Benahavis-Marbella-pool-May-2024_2.jpg"

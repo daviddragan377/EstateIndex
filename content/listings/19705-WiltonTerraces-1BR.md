@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "73 sq meters"
 yearbuilt: "2020"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Wilton_Terraces_Exterior_5_bfkax6.jpg"

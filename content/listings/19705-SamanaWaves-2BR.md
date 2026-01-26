@@ -10,7 +10,7 @@ bedrooms: "2"
 bathrooms: "2"
 area: "102 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/JVC_1_ppcf3a-2.jpg"

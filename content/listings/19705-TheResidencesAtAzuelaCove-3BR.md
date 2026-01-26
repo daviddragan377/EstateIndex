@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "181 sq meters"
 yearbuilt: "2023"
-date: 1769451995
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/The_Residences_at_Azuela_Cove_-_Seaview_Corner_Suite_-_Flex_Room_tyafvt.jpg"

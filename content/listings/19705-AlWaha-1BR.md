@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "72 sq meters"
 yearbuilt: "2026"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/241125_1BED_Living-Space_A_300dpi.bmp"

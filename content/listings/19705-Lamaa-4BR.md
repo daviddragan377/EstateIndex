@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "249 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/MJL-LAMAA-INT-LV-Oct-2022-1.jpg-1.jpg"

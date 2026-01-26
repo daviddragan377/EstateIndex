@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "120 sq meters"
 yearbuilt: "2026"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Shot01_ant4mm-3.jpg"

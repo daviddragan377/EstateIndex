@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "6"
 area: "505 sq meters"
 yearbuilt: "2027"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/1_12-21.jpg"

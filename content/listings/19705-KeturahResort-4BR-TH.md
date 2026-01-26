@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "4"
 area: "497 sq meters"
 yearbuilt: "2026"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/DU100_0022875_VIEW_15_RESIDENTIAL_POOL_PERPENDICULAR_khtqkb-2.jpg"

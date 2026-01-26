@@ -10,7 +10,7 @@ bedrooms: "4"
 bathrooms: "5"
 area: "220 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/03/MJL-Jadeel-Ext-01-19-3-22-scaled-1.jpg"

@@ -10,7 +10,7 @@ bedrooms: "1"
 bathrooms: "1"
 area: "67.8 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/10/BATHROOM-2ND-FLOOR-VIEW-1-scaled.jpg"

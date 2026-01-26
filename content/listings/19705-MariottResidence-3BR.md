@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "243 sq meters"
 yearbuilt: "2025"
-date: 1769451997
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/Club_Lounge_view1_25_08_2022_e_e78pjn-2.jpg"

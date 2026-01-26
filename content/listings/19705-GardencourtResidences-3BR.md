@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "3"
 area: "195 sq meters"
 yearbuilt: "2027"
-date: 1769451995
+date: 1769459837
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/04/3BR_Parkside_Sui_a0ryak-2.jpg"

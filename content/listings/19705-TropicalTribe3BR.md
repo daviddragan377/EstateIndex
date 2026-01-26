@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "4"
 area: "183.53 sq meters"
 yearbuilt: "0"
-date: 1769451989
+date: 1769459833
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/DJI_20241026154737_0013_D-3.jpg"

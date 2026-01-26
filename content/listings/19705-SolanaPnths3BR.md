@@ -10,7 +10,7 @@ bedrooms: "3"
 bathrooms: "2"
 area: "101.71 sq meters"
 yearbuilt: "2026"
-date: 1769451995
+date: 1769459836
 draft: false
 images:
   - "https://internationalpropertyalerts.com/wp-content/uploads/2025/11/B8-Solana-Village-P4-1-La-Cala-Golf-kitchen.jpg"

@@ -1,10 +1,15 @@
 * cache/
 .hugo_build.lock
-/public
 /resources
 node_modules/
+/public
 .env
 .env.local
 *.swp
 *.swo
 .DS_Store
+.github/
+agent_progress_logs/
+agent_resources/
+.vercel
+.env*.local
